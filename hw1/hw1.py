@@ -49,6 +49,9 @@ kArray = [1, 5, 10, 50]
 X, Y = ml.shuffleData(X, Y)  # shuffle data randomly
 Xtr, Xva, Ytr, Yva = ml.splitData(X, Y, 0.75)  # split data into 75/25 train/validation
 
+# plt.scatter(Xtr, Ytr)
+# plt.show()
+
 for k in kArray:
     knn = ml.knn.knnClassify()  # create the object and train it
     knn.train(Xtr, Ytr, k)  # where K is an integer, e.g. 1 for nearest neighbor prediction
